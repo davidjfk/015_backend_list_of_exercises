@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="title">
+  Welcome, {{active_user}}!
+</h1>
+
+{% if active_user == 'Alice' %}
+  <p>Buenos Dias Alice!</p>
+  <p>Que usted disfrute su trabajo!</p>
+{% elif active_user == 'Bob' %}
+  <p>Sayonara Bob!</p>
+  <p>Bonne journée de travail Bob!</p>
+{% else %}
+  <p>Greetings, {{active_user}}!</p>
+  <p>Have a productive day!</p>
+{% endif %}
+{% endblock content %}
